@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <title>Qr Code Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-orange-50 pt-6 px-8 font-alata">
+  <h1 class="text-3xl pr-8 pb-2 inline-block border-b border-gray-500">QR code</h1>
+  <!-- main content of the page -->
+  <main class="pt-8 flex justify-center items-center">
+
+    <!-- section -->
+    <section id="qr-code-settings"
+      class="container settings-container bg-white rounded-2xl min-w-[350px] max-w-[500px] w-[50%] min-h-[600px] py-0 px-8">
+      <header class="text-center">
+        <!-- QR CODE Gen heading -->
+        <h2 class="text-2xl pb-2 mt-4 mb-1 ">Generate your QR code</h2>
+        <!-- info after h2 (QR CODE Gen heading) -->
+        <h3 class="text-md mt-1 font-mono font-extralight">Adjust the settings below for your QR Code</h3>
+      </header>
+      <!-- input field elements -->
+      <div>
+        <!--  -->
+        <div class="setting">
+          <label for="data">Text/URL</label>
+          <span class="span-label">Include text or URL only</span>
+          <input type="text"
+            class="dataError pl-1 border border-gray-500 rounded-md font-sans leading-8 focus:outline-none focus:border-amber-500"
+            name="data" id="data" min="1" max="900">
+        </div>
+        <!--  -->
+        <div class="colors flex justify-around">
+          <!-- setting 1 -->
+          <div class="setting items-center text-center">
+            <label for="color">Main Color</label>
+            <input type="color" class="input-color" id="color" value="#000000">
+            <span id="color-value" class="span-label">#000000</span>
+          </div>
+          <!-- setting 2 -->
+          <div class="setting items-center text-center">
+            <label for="color">Background Color</label>
+            <input type="color" class="input-color" id="bg-color" value="#c7c7c7">
+            <span id="bg-color-value" class="span-label">#c7c7c7</span>
+          </div>
+        </div>
+        <!-- size -->
+        <div class="setting">
+          <label for="size">Size</label>
+          <span id="size-value" class="span-label">200 x 200</span>
+          <input type="range" name="size" id="size" min="100" max="1000" value="200" step="100"
+            class="appearance-none outline-none w-full rounded-[3px] bg-slate-200">
+        </div>
+        <!-- margin -->
+        <div class="setting">
+          <label for="margin">Margin</label>
+          <span id="margin-value" class="span-label">1 px</span>
+          <input type="range" name="margin" id="margin" min="0" max="100" value="1" step="1"
+            class="appearance-none outline-none w-full rounded-[3px] bg-slate-200">
+        </div>
+        <!-- Image formats -->
+        <div class="setting">
+          <fieldset class="flex flex-wrap border-none m-0 p-0 justify-between">
+            <legend>Image Format</legend>
+            <!-- png -->
+            <div class="legend-div">
+              <input type="radio" name="format" id="png" value="png" checked>
+              <label class="legend-div" for="png">PNG</label>
+            </div>
+            <!-- gif -->
+            <div class="legend-div">
+              <input type="radio" name="format" id="gif" value="gif">
+              <label class="legend-div" for="gif">GIF</label>
+            </div>
+            <!-- jpeg -->
+            <div class="legend-div">
+              <input type="radio" name="format" id="jpeg" value="jpeg">
+              <label class="legend-div" for="jpeg">JPEG</label>
+            </div>
+            <!-- jpg -->
+            <div class="legend-div">
+              <input type="radio" name="format" id="jpg" value="jpg">
+              <label class="legend-div" for="jpg">JPG</label>
+            </div>
+            <!-- svg -->
+            <div class="legend-div">
+              <input type="radio" name="format" id="svg" value="svg">
+              <label class="legend-div" for="svg">SVG</label>
+            </div>
+          </fieldset>
+        </div>
+        <!-- button -->
+        <div class="cta flex items-center justify-center">
+          <button
+            class=" bg-orange-400 px-2 py-1 border m-6 rounded-md hover:bg-orange-300 transition-all ease-in duration-150 disabled:outline-none disabled:transition-none disabled:cursor-not-allowed"
+            id="cta" type="submit" disabled>Generate QR
+            Code</button>
+        </div>
+      </div>
+
+    </section>
+    <!-- 2nd section -->
+    <section id="qr-code-result"
+      class="container result-container hidden bg-white rounded-2xl min-w-[350px] max-w-[500px] w-[50%] min-h-[600px] py-0 px-8">
+      <header class="text-center">
+        <!-- QR CODE Gen completed heading -->
+        <h2 class="text-2xl pb-2 mt-4 mb-1 ">Your QR code is here!</h2>
+        <!-- info after h2 (QR CODE Gen heading) -->
+        <h3 class="text-md mt-1 font-mono font-extralight">Scan the image below</h3>
+
+        <!-- qr code -->
+        <div class="setting w-[90%]">
+          <img src="" alt="qr-code" id="qr-code-image">
+        </div>
+        <!-- btn -->
+        <div class="flex items-center justify-center">
+          <button
+            class="goback-btn bg-orange-400 px-2 py-1 border m-6 rounded-md hover:bg-orange-300 transition-all ease-in duration-150 disabled:outline-none disabled:transition-none disabled:cursor-not-allowed"
+            id="cta" type="submit"> Go back
+          </button>
+        </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="mt-12 p-4">
+    <h6 class="justify-center text-center text-lg">
+      Copyright &#169; <script>
+        document.write(new Date().getFullYear())
+      </script> QR Code Gen.</h6>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .setting {
+    @apply m-4 flex flex-col;
+  }
+  .span-label {
+    @apply font-sans font-light;
+  }
+  .input-color {
+    @apply appearance-none bg-none border-solid border-black h-[50px] w-[50px] p-2 cursor-pointer;
+  }
+  .legend-div {
+    @apply cursor-pointer;
+  }
+  ::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  ::-webkit-color-swatch {
+    border: 0;
+  }
+
+  ::-moz-color-swatch {
+    border: 1px solid #000000;
+  }
+}
+
+input[type="radio"] {
+  display: inline-block;
+  width: 15px;
+  heigth: 15px;
+  padding: 2px;
+  background-clip: content-box;
+  border: 1px solid #fdc886;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
