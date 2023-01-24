@@ -8,7 +8,7 @@
 
 #
 
-> ### Tech stack used: <mark>Tailwind CSS, HTML, JS<mark>
+> ### Tech stack used: **Tailwind CSS, HTML, JS**
 >
 > ### More info about the project repo **[QR code](https://github.com/srujankarthik/webdev/tree/main/01-QR-code-gen)**
 
