@@ -39,7 +39,22 @@ _The home page of the Qr code gen._
 
 #
 
-![QR code gen](/assets/images/03-randomphoto-gen.png)
+![Random Photo gen](/assets/images/03-randomphoto-gen.png)
 _The home page of the Random Photo Search._
+
+---
+
+## 4. Wiki search
+
+#
+
+### &nbsp; &nbsp; Tech stack used: **CSS, HTML, JS, Axios**
+
+> ### More info about the project repo **[Random photo search](https://github.com/srujankarthik/webdev)**
+
+#
+
+![Wiki Search](/assets/images/04-wiki.png)
+_The home page of the Wiki Search._
 
 ---
