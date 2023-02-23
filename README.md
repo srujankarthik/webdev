@@ -35,7 +35,7 @@ _The home page of the Qr code gen._
 
 ### &nbsp; &nbsp; Tech stack used: **CSS, HTML, JS**
 
-> ### More info about the project repo **[Random photo search](https://github.com/srujankarthik/webdev/tree/main/03-randomphoto-gen)**
+> ### More info about the project repo **[Wiki search](https://github.com/srujankarthik/webdev/tree/main/03-randomphoto-gen)**
 
 #
 
