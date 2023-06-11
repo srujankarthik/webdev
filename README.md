@@ -58,3 +58,12 @@ _The home page of the Random Photo Search._
 _The home page of the Wiki Search._
 
 ---
+
+## 5. CRUD app
+
+#
+
+### &nbsp; &nbsp; Tech stack used: **TailwindCSS, HTML, JS, Axios, NodeJS, express, MongoDB**
+
+## &nbsp; &nbsp; WORK IN PROGRESS/ CRUD OPERATIONS in MongoDB ARE DONE, FETCHING Tasks (GET tasks req) is VISIBLE TO USER.
+---

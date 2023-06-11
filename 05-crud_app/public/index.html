@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- CRUD APP HEADER -->
+    <div class="container mx-auto mt-48 rounded-2xl">
+        <h1 class="text-2xl flex justify-center items-center">
+            <span class="font-extrabold -skew-y-3 bg-lime-300">CRUD TASKS</span>
+        </h1>
+        <form class="task-form flex justify-center items-center mt-8">
+            <div class="form-control">
+                <input 
+                type="text"
+                name="name"
+                class="task-input border-2 rounded-md border-rose-500 mt-1 px-3 py-2 bg-white  shadow-sm placeholder-slate-400 focus:outline-none focus:border-lime-500 focus:ring-lime-500 "
+                placeholder="死"
+                />
+              </div>
+              <button type="submit" class="btn submit-btn ml-12 bg-lime-300 mt-1 px-3 py-2 rounded-lg">Submit</button>
+        </form>
+    </div>
+    <section class="tasks-container container mx-auto mt-20 flex justify-center">
+      <p class="loading">Loading...</p>
+      <div class="tasks"></div>
+    </section>
+    <!-- axios, import in js wasn't working idk why tho -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
