@@ -1,0 +1,22 @@
+name: 05-crud_app
+
+on: [push]
+
+defaults:
+  run:
+  working-directory: ./05-crud_app
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      uses: actions/checkout@v3
+      run: npm install
+      run: npm run tailwindWatch
+      run: npm run dev 
