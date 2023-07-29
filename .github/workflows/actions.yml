@@ -5,7 +5,12 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  
+    defaults:
+      run:
+        shell: bash
+        working-directory: /05-crud_app
+      
 
     strategy:
       matrix:
@@ -19,5 +24,3 @@ jobs:
       - run: npm run tailwindWatch
       - name: Run the dev server
       - run: npm run dev 
-
-working-directory: /05-crud_app
